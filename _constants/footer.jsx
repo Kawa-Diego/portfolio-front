@@ -17,7 +17,7 @@ const socials = [
     {
         name: "Email",
         icon: "../_images/gmail2.svg",
-        url: "mailto:kawadiego.soares@gmail.com"
+        url: "mailto:contact@o-diego.dev"
     }
 ]
 
