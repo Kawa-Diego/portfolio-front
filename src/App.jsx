@@ -1,11 +1,17 @@
 import Contact from './_sections/footer/Contact'
 
-const App =() => {
+const App = () => {
   return (
-    <main>
+    <>
+      <Loading /> 
+      <main className="app-main">
+      <Navbar />
+      <Hero />
+      <About />
       <Contact />
-    </main>
-  )
-}
+      </main>
+    </>
+  );
+};
 
-export default App
+export default App;

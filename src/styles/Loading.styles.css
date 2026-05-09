@@ -1,0 +1,87 @@
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  overflow: hidden;
+  background: radial-gradient(circle at 22% 28%, rgba(0, 180, 255, 0.14) 0%, rgba(0, 180, 255, 0) 42%), #09090f;
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.intro-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 180, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 255, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.intro-overlay-leave {
+  opacity: 0;
+  transform: translateY(-1rem);
+}
+
+.intro-content {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 100%);
+  text-align: center;
+}
+
+.intro-label {
+  margin: 0;
+  color: rgba(224, 244, 255, 0.56);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.intro-title {
+  margin: 0.55rem 0 0;
+  color: #e0f4ff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.2rem, 7vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.intro-progress {
+  margin-top: 1rem;
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(224, 244, 255, 0.14);
+}
+
+.intro-progress-bar {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0078ff, #00b4ff);
+  box-shadow: 0 0 18px rgba(0, 180, 255, 0.5);
+  animation: intro-progress-fill 1500ms ease forwards;
+}
+
+@keyframes intro-progress-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-progress-bar {
+    animation: none;
+    width: 100%;
+  }
+}
