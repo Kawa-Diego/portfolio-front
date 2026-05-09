@@ -32,6 +32,7 @@ export default function Navbar() {
     <header className="navbar-shell">
       <nav className="navbar" aria-label="Principal">
         <a href="#section-hero" className="navbar-brand">
+          <img src={navbar.logo} alt={navbar.brand} className="navbar-logo" />
           {navbar.brand}
         </a>
 
