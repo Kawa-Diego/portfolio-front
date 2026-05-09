@@ -1,104 +1,158 @@
 .section-contact {
-    background: #111118;
-    padding: 2rem 3rem;
+    background: #0a0a0f;
+    padding: 1rem 1.2rem 2rem;
     position: relative;
     display: flex;
     justify-content: center;
+}
 
-    .contact-container {
-        width: min(1180px, 100%);
-        border-radius: 14px;
-        padding: 1rem 1.5rem;
-        align-items: center;
+.section-contact .contact-container {
+    border-top: 1px solid rgba(224, 244, 255, 0.08);
+    border-bottom: 1px solid rgba(224, 244, 255, 0.14);
+    width: min(1180px, 100%);
+    padding: 2rem 1.2rem;
+    align-items: center;
+}
 
-        .contact-describe-text-one {
-            font-family: "Space Grotesk", sans-serif;
+.section-contact .contact-little-bits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    color: rgba(224, 244, 255, 0.45);
+    font-size: 0.95rem;
+    text-align: center;
+}
 
-            h4 {
-                color: #e0f4ff;
-                font-size: 1.9rem;
-                font-weight: 800;
-                line-height: 1.1;
-            }
-        }
+.section-contact .contact-describe {
+    color: #e0f4ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
-        .contact-describe-text-two {
-            font-family: Inter, sans-serif;
+.section-contact .contact-describe-text-one {
+    font-family: "Space Grotesk", sans-serif;
+}
 
-            p {
-                color: rgba(224, 244, 255, 0.45);
-                font-size: 0.95rem;
-                margin-top: 0.25rem;
-            }
-        }
+.section-contact .contact-describe-text-one h4 {
+    color: #e0f4ff;
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.section-contact .contact-describe-text-two {
+    font-family: Inter, sans-serif;
+}
+
+.section-contact .contact-describe-text-two p {
+    color: rgba(224, 244, 255, 0.45);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+.section-contact .contact-handling {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.section-contact .contact-describe-text-three {
+    font-family: Inter, sans-serif;
+    margin-right: 0.4rem;
+}
+
+.section-contact .contact-describe-text-three p {
+    color: rgba(224, 244, 255, 0.45);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.section-contact .social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    border: 1px solid rgba(224, 244, 255, 0.2);
+    background: rgba(10, 10, 15, 0.6);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease,
+        background-color 180ms ease;
+}
+
+.section-contact .social-mask {
+    width: 18px;
+    height: 18px;
+    background-color: rgba(224, 244, 255, 0.65);
+    mask-image: var(--icon-url);
+    -webkit-mask-image: var(--icon-url);
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    transition: background-color 180ms ease;
+}
+
+.section-contact .social-btn:hover,
+.section-contact .social-btn:focus-visible {
+    border-color: #00b4ff;
+    background-color: rgba(0, 180, 255, 0.08);
+    box-shadow: 0 0 0 1px rgba(0, 180, 255, 0.35), 0 0 16px rgba(0, 180, 255, 0.18);
+    transform: translateY(-1px);
+}
+
+.section-contact .social-btn:hover .social-mask,
+.section-contact .social-btn:focus-visible .social-mask {
+    background-color: #00b4ff;
+}
+
+@media (max-width: 900px) {
+    .section-contact {
+        padding: 1.5rem 0.8rem 2.1rem;
     }
 
-    .contact-describe-text-three {
-        font-family: Inter, sans-serif;
-        position: relative;
-        right: 180px;
-        left: 130px;
-        bottom: 40px;
-
-        p {
-            color: rgba(224, 244, 255, 0.45);
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-    }
-
-    .contact-handling {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0.8rem;
-
-        .social-btn {
-            width: 38px;
-            height: 38px;
-            border-radius: 8px;
-            border: 1px solid rgba(224, 244, 255, 0.2);
-            background: rgba(10, 10, 15, 0.6);
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease,
-                background-color 180ms ease;
-        }
-
-        .social-mask {
-            width: 18px;
-            height: 18px;
-            background-color: rgba(224, 244, 255, 0.65);
-            mask-image: var(--icon-url);
-            -webkit-mask-image: var(--icon-url);
-            mask-repeat: no-repeat;
-            -webkit-mask-repeat: no-repeat;
-            mask-position: center;
-            -webkit-mask-position: center;
-            mask-size: contain;
-            -webkit-mask-size: contain;
-            transition: background-color 180ms ease;
-        }
-
-        .social-btn:hover,
-        .social-btn:focus-visible {
-            border-color: #00b4ff;
-            background-color: rgba(0, 180, 255, 0.08);
-            box-shadow: 0 0 0 1px rgba(0, 180, 255, 0.35), 0 0 16px rgba(0, 180, 255, 0.18);
-            transform: translateY(-1px);
-        }
-
-        .social-btn:hover .social-mask,
-        .social-btn:focus-visible .social-mask {
-            background-color: #00b4ff;
-        }
-    }
-
-    .contact-describe {
-        color: #e0f4ff;
+    .section-contact .contact-container {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        min-height: 44vh;
         justify-content: center;
+        padding: 1.2rem 1rem;
+    }
+
+    .section-contact .contact-handling {
+        flex-wrap: wrap;
+        gap: 0.55rem;
+    }
+
+    .section-contact .contact-describe-text-three {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .section-contact {
+        padding: 1.3rem 0.8rem 1.9rem;
+    }
+
+    .section-contact .contact-container {
+        min-height: 40vh;
+    }
+
+    .section-contact .contact-describe-text-one h4 {
+        font-size: 1.45rem;
+    }
+
+    .section-contact .contact-describe-text-two p,
+    .section-contact .contact-describe-text-three p {
+        font-size: 0.9rem;
     }
 }

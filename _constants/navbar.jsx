@@ -10,10 +10,6 @@ const navbar = {
       url: "#section-about",
     },
     {
-      name: "Skills",
-      url: "#section-skills",
-    },
-    {
       name: "Projetos",
       url: "#section-projects",
     },
