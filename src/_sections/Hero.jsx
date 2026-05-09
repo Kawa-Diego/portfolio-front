@@ -57,15 +57,6 @@ export default function Hero() {
               |
             </span>
           </p>
-
-          <div className="hero-actions">
-            <a href="#section-projects" className="hero-btn hero-btn-primary">
-              Ver projetos
-            </a>
-            <a href="#section-contact" className="hero-btn hero-btn-ghost">
-              Baixar CV
-            </a>
-          </div>
         </div>
 
         <span className="hero-dot hero-dot-top" />
