@@ -37,8 +37,6 @@ export default function Loading() {
       {showIntro && (
         <div className={`intro-overlay ${isIntroLeaving ? "intro-overlay-leave" : ""}`}>
           <div className="intro-content">
-            <p className="intro-label">Initializing portfolio</p>
-            <h1 className="intro-title">dev.you</h1>
             <div className="intro-progress">
               <span className="intro-progress-bar" />
             </div>
