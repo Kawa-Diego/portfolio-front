@@ -13,7 +13,7 @@ const socials = [
         name: "Whatsapp",
         icon: "../_images/whatsapp.svg",
         url: "https://wa.me/5544999649804"
-    }
+    },
 ]
 
 const contact = {
@@ -24,4 +24,8 @@ const contact = {
     }
 }
 
-export { socials, contact }
+const littleBits = {
+    text: "Developed using React"
+}
+
+export { socials, contact, littleBits }
