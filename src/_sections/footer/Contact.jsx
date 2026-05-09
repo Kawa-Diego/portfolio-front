@@ -1,4 +1,4 @@
-import { contact, socials } from "../../../_constants/footer";
+import { contact, socials, littleBits } from "../../../_constants/footer";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import "../../styles/Contact.style.css";
@@ -89,6 +89,9 @@ export default function Contact() {
               />
             </a>
           ))}
+        </div>
+        <div className="contact-little-bits">
+          <p>{littleBits.text}</p>
         </div>
       </div>
     </section>
