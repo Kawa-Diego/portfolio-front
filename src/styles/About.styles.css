@@ -1,0 +1,114 @@
+.about-section {
+  background: #0d0d14;
+  padding: 0;
+  min-height: calc(100vh - 72px);
+}
+
+.about-panel {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #09090f;
+  border-top: 1px solid rgba(224, 244, 255, 0.08);
+  border-bottom: 1px solid rgba(224, 244, 255, 0.14);
+  font-family: Inter, sans-serif;
+}
+
+.about-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 180, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 180, 255, 0.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+.about-content {
+  width: min(640px, 100%);
+  margin: 0 auto;
+  transform: translateX(clamp(18px, 4vw, 74px));
+  padding: 2rem 1.4rem 1.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.about-title {
+  color: #e0f4ff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.about-title span {
+  color: #00b4ff;
+}
+
+.about-description {
+  margin-top: 0.8rem;
+  color: rgba(224, 244, 255, 0.58);
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.about-stack-group {
+  margin-top: 1rem;
+}
+
+.about-stack-group h3 {
+  color: rgba(224, 244, 255, 0.36);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+}
+
+.about-badges {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.about-badge {
+  padding: 0.4rem 0.9rem;
+  border-radius: 7px;
+  border: 1px solid;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.about-badge-frontend {
+  border-color: rgba(0, 180, 255, 0.55);
+  color: #00b4ff;
+  background: rgba(0, 180, 255, 0.08);
+}
+
+.about-badge-backend {
+  border-color: rgba(224, 244, 255, 0.2);
+  color: rgba(224, 244, 255, 0.62);
+  background: rgba(224, 244, 255, 0.05);
+}
+
+@media (max-width: 900px) {
+  .about-section {
+    min-height: auto;
+  }
+
+  .about-panel {
+    min-height: auto;
+  }
+
+  .about-content {
+    padding: 1.3rem 1rem 1.2rem;
+    transform: translateX(0);
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+}

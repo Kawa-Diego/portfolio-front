@@ -2,25 +2,30 @@ const socials = [
     {
         name: "Instagram",
         icon: "../_images/instagram.svg",
-        url: "https://www.instagram.com"
+        url: "https://www.instagram.com/o_diego.dev"
     },
     {
         name: "LinkedIn",
         icon: "../_images/linkedin2.svg",
-        url: "https://www.linkedin.com"
+        url: "https://www.linkedin.com/in/kawã-diego"
     },
     {
         name: "Whatsapp",
         icon: "../_images/whatsapp.svg",
-        url: "https://www.web.whatsapp.com"
+        url: "https://wa.me/5544999649804"
+    },
+    {
+        name: "Email",
+        icon: "../_images/gmail2.svg",
+        url: "mailto:kawadiego.soares@gmail.com"
     }
 ]
 
 const contact = {
-    heading: "diego.dev",
+    heading: "Let's talk",
     contact: {
-        email: "email@email.com",
-        phone: "(44) 99999-9999"
+        note: "Available for opportunities and collaborations.",
+        sub: "Contact me"
     }
 }
 
