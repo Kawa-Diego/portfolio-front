@@ -1,6 +1,5 @@
 import "../styles/About.styles.css";
-import { frontendSkills, backendSkills } from "../../_constants/about";
-
+import { skills } from "../../_constants/about";
 
 export default function About() {
   return (
@@ -15,29 +14,32 @@ export default function About() {
             Fullstack developer passionate about creating modern and scalable web solutions. I work with cutting-edge technologies and have an eye for good design.
           </p>
 
-          <div className="about-stack-group">
-            <h3>FRONTEND</h3>
-            <div className="about-badges">
-              {frontendSkills.map((skill) => (
-                <span key={skill} className="about-badge about-badge-frontend">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+          <div className="about-skills-grid" id="section-skills">
+            {skills.map((group) => {
+              const title = Array.isArray(group.skills.title)
+                ? group.skills.title[0]
+                : group.skills.title;
+              const isFrontend = title?.toLowerCase() === "frontend";
 
-          <div className="about-stack-group">
-            <h3>BACKEND</h3>
-            <div className="about-badges">
-              {backendSkills.map((skill) => (
-                <span key={skill} className="about-badge about-badge-backend">
-                  {skill}
-                </span>
-              ))}
-            </div>
+              return (
+                <div key={title} className="about-skill-group">
+                  <h3>{title}</h3>
+                  <div className="about-skill-tags">
+                    {group.skills.skills.map((item) => (
+                      <span
+                        key={item.name}
+                        className={`about-skill-tag ${isFrontend ? "is-frontend" : "is-neutral"}`}
+                      >
+                        {item.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
-      </div>
+      </div> 
     </section>
   );
 }

@@ -1,13 +1,14 @@
 const navbar = {
+  logo: "../_images/logo.svg",
   brand: "o-diego.dev",
   items: [
     {
-      name: "Sobre",
-      url: "#section-about",
+      name: "Home",
+      url: "#section-hero",
     },
     {
-      name: "Skills",
-      url: "#section-skills",
+      name: "Sobre",
+      url: "#section-about",
     },
     {
       name: "Projetos",
