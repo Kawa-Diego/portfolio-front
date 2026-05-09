@@ -22,11 +22,22 @@
 
 .navbar-brand {
   justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.9rem;
   font-weight: 700;
+  line-height: 1;
   color: #e0f4ff;
   text-decoration: none;
+}
+
+.navbar-logo {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 .navbar-list {
@@ -123,7 +134,13 @@
   }
 
   .navbar-brand {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    gap: 0.45rem;
+  }
+
+  .navbar-logo {
+    width: 30px;
+    height: 30px;
   }
 
   .navbar-toggle {

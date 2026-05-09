@@ -1,4 +1,5 @@
 const navbar = {
+  logo: "../_images/logo.svg",
   brand: "o-diego.dev",
   items: [
     {
