@@ -33,6 +33,20 @@
         }
     }
 
+    .contact-describe-text-three {
+        font-family: Inter, sans-serif;
+        position: relative;
+        right: 180px;
+        left: 130px;
+        bottom: 40px;
+
+        p {
+            color: rgba(224, 244, 255, 0.45);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+    }
+
     .contact-handling {
         display: flex;
         flex-direction: row;
