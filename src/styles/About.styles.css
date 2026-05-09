@@ -96,19 +96,44 @@
 
 @media (max-width: 900px) {
   .about-section {
-    min-height: auto;
+    min-height: 82vh;
   }
 
   .about-panel {
-    min-height: auto;
+    min-height: 82vh;
+    align-items: center;
   }
 
   .about-content {
-    padding: 1.3rem 1rem 1.2rem;
+    width: min(760px, 100%);
+    padding: 1.8rem 1rem 1.7rem;
     transform: translateX(0);
   }
 
   .about-description {
     font-size: 1rem;
+  }
+
+  .about-stack-group h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .about-section {
+    min-height: 76vh;
+  }
+
+  .about-panel {
+    min-height: 76vh;
+  }
+
+  .about-content {
+    padding: 1.6rem 1rem 1.5rem;
+  }
+
+  .about-badge {
+    font-size: 0.88rem;
+    padding: 0.35rem 0.7rem;
   }
 }
