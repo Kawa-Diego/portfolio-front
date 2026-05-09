@@ -50,7 +50,7 @@ export default function Contact() {
         button,
         {
           opacity: 0,
-          yPercent:-10,
+          yPercent: -10,
           duration: 0.45,
           ease: "power1.inOut",
         },
@@ -67,10 +67,13 @@ export default function Contact() {
             <h4>{contact.heading}</h4>
           </div>
           <div className="contact-describe-text-two">
-            <p>{contact.contact.email + " • " + contact.contact.phone}</p>
+            <p>{contact.contact.note}</p>
           </div>
         </div>
         <div className="contact-handling" id="contact-handling">
+          <div className="contact-describe-text-three">
+            <p>{contact.contact.sub}</p>
+          </div>
           {socials.map((social) => (
             <a
               key={social.name}
