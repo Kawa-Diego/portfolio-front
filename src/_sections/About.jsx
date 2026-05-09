@@ -17,7 +17,7 @@ export default function About() {
 
           <div className="about-stack-group">
             <h3>FRONTEND</h3>
-            <div className="about-badges">
+            <div className="about-badges" id="section-skills">
               {frontendSkills.map((skill) => (
                 <span key={skill} className="about-badge about-badge-frontend">
                   {skill}
